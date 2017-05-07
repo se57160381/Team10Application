@@ -32,54 +32,59 @@
         android:textSize="20sp"
         />
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
                 android:layout_marginLeft="20sp"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="สถานะ"
                 android:textSize="15sp"/>
             <TextView
                 android:layout_marginLeft="40sp"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="จำนวน"
                 android:textSize="15sp"/>
             <TextView
                 android:layout_marginLeft="40sp"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="ร้อยละ"
                 android:textSize="15sp"/>
             <TextView
                 android:layout_marginLeft="40sp"
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="ทั้งหมด"
                 android:textSize="15sp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ListView
+            <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="196dp"
                 android:id="@+id/Report"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true">
-            </ListView>
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
 
         <LinearLayout
             android:padding="10sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
             <TextView
                 android:padding="10sp"
                 android:layout_width="wrap_content"
@@ -87,17 +92,18 @@
                 android:textSize="20sp"
                 android:text="กราฟจำนวนกรณีทดสอบ"/>
 
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/Grap"
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/chart_id"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true">
-            </ListView>
-
+            </com.github.mikephil.charting.charts.LineChart>
 
         </LinearLayout>
 
     </LinearLayout>
+
 
 </RelativeLayout>

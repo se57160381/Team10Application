@@ -24,13 +24,12 @@
             android:text="โครงการทดสอบ"
             android:textSize="20sp"/>
 
-        <ListView
+        <Spinner
+            android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/Project"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
-        </ListView>
+            android:layout_height="wrap_content">
+
+        </Spinner>
 
     </LinearLayout>
 
